@@ -25,7 +25,7 @@ public class OrderRowDAO {
         orders = orderDB.getAllOrders();
     }
 
-    public List<OrderRow> getAllBelongsTo(){
+    public List<OrderRow> getAllOrderRows(){
         List<OrderRow> list = new ArrayList<>();
         list.add(new OrderRow(1,products.get(0),orders.get(0),2));
         list.add(new OrderRow(2,products.get(1),orders.get(0),1));
