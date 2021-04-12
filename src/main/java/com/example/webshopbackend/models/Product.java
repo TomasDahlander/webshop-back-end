@@ -19,11 +19,12 @@ public class Product {
     private String image;
     private int quantity;
     private boolean isFeatured;
-    private List<Category> categories;
+    // private List<Category> categories;
+    private Category category;
 
     public Product(){}
 
-    public Product(int id, String title, String description, double price, String unit, String brand, String image, int quantity, boolean isFeatured, List<Category> categories) {
+    public Product(int id, String title, String description, double price, String unit, String brand, String image, int quantity, boolean isFeatured, Category category) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -33,7 +34,8 @@ public class Product {
         this.image = image;
         this.quantity = quantity;
         this.isFeatured = isFeatured;
-        this.categories = categories;
+        this.category = category;
+        // this.categories = categories;
     }
 
     public int getId() {
@@ -108,13 +110,21 @@ public class Product {
         isFeatured = featured;
     }
 
-    public List<Category> getCategories() {
-        return categories;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
+    public void setCategory(Category category) {
+        this.category = category;
     }
+
+    //    public List<Category> getCategories() {
+//        return categories;
+//    }
+//
+//    public void setCategories(List<Category> categories) {
+//        this.categories = categories;
+//    }
 }
 
 
