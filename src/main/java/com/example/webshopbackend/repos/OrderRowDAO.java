@@ -3,6 +3,7 @@ package com.example.webshopbackend.repos;
 import com.example.webshopbackend.models.Order;
 import com.example.webshopbackend.models.OrderRow;
 import com.example.webshopbackend.models.Product;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * Time: 17:20 <br>
  * Project: webshop-back-end <br>
  */
+@Repository
 public class OrderRowDAO {
 
     List<Product> products;

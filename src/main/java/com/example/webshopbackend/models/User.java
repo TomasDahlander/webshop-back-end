@@ -15,12 +15,12 @@ public class User {
     private String lastname;
     private String number;
     private Address address;
-    private boolean accountType;
+    private int accountType;
     private boolean status;
 
     public User(){}
 
-    public User(int id, String email, String password, String firstname, String lastname, String number, Address address, boolean accountType, boolean status) {
+    public User(int id, String email, String password, String firstname, String lastname, String number, Address address, int accountType, boolean status) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -88,11 +88,11 @@ public class User {
         this.address = address;
     }
 
-    public boolean isAccountType() {
+    public int isAccountType() {
         return accountType;
     }
 
-    public void setAccountType(boolean accountType) {
+    public void setAccountType(int accountType) {
         this.accountType = accountType;
     }
 

@@ -3,22 +3,22 @@ package com.example.webshopbackend.models;
 /**
  * Created by Tomas Dahlander <br>
  * Date: 2021-04-12 <br>
- * Time: 10:06 <br>
+ * Time: 11:53 <br>
  * Project: webshop-back-end <br>
  */
 public class Address {
-    
+
     private int id;
     private String street;
-    private String zipCode;
+    private String zipcode;
     private String city;
 
     public Address(){}
 
-    public Address(int id, String street, String zipCode, String city) {
+    public Address(int id, String street, String zipcode, String city) {
         this.id = id;
         this.street = street;
-        this.zipCode = zipCode;
+        this.zipcode = zipcode;
         this.city = city;
     }
 
@@ -38,12 +38,12 @@ public class Address {
         this.street = street;
     }
 
-    public String getZipCode() {
-        return zipCode;
+    public String getZipcode() {
+        return zipcode;
     }
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 
     public String getCity() {
