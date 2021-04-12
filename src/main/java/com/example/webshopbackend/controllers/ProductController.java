@@ -7,4 +7,5 @@ package com.example.webshopbackend.controllers;
  * Project: webshop-back-end <br>
  */
 public class ProductController {
+    
 }
