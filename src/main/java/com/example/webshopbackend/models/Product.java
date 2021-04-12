@@ -1,4 +1,6 @@
-package models;
+package com.example.webshopbackend.models;
+
+import java.util.List;
 
 /**
  * Created by Tomas Dahlander <br>
@@ -26,22 +28,21 @@ public class Product {
     private String image;
     private int inStock;
     private boolean isFeatured;
+    private List<Category> categories;
 
     public Product(){}
 
-    public Product(int id, String title, String description,
-                   double price, double measurement, UNIT unit, String supplier,
-                   String image, int inStock, boolean isFeatured) {
+    public Product(int id, String title, String description, double price, String unit, String brand, String image, int quantity, boolean isFeatured, List<Category> categories) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.price = price;
-        this.measurement = measurement;
         this.unit = unit;
-        this.supplier = supplier;
+        this.brand = brand;
         this.image = image;
-        this.inStock = inStock;
+        this.quantity = quantity;
         this.isFeatured = isFeatured;
+        this.categories = categories;
     }
 
     public int getId() {
@@ -76,20 +77,20 @@ public class Product {
         this.price = price;
     }
 
-    public double getMeasurement() {
-        return measurement;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setMeasurement(double measurement) {
-        this.measurement = measurement;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
-    public String getSupplier() {
-        return supplier;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setSupplier(String supplier) {
-        this.supplier = supplier;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getImage() {
@@ -100,12 +101,12 @@ public class Product {
         this.image = image;
     }
 
-    public int getInStock() {
-        return inStock;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setInStock(int inStock) {
-        this.inStock = inStock;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public boolean isFeatured() {
@@ -115,4 +116,16 @@ public class Product {
     public void setFeatured(boolean featured) {
         isFeatured = featured;
     }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
 }
+
+
+
+

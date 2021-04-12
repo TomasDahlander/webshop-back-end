@@ -1,4 +1,4 @@
-package models;
+package com.example.webshopbackend.models;
 
 /**
  * Created by Tomas Dahlander <br>

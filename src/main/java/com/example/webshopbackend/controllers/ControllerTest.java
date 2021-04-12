@@ -1,15 +1,15 @@
 package com.example.webshopbackend.controllers;
 
-import models.Customer;
-import models.Order;
-import models.OrderRow;
-import models.Product;
+import com.example.webshopbackend.models.User;
+import com.example.webshopbackend.models.Order;
+import com.example.webshopbackend.models.OrderRow;
+import com.example.webshopbackend.models.Product;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import repos.CustomerDAO;
-import repos.OrderDAO;
-import repos.OrderRowDAO;
-import repos.ProductDAO;
+import com.example.webshopbackend.repos.UserDAO;
+import com.example.webshopbackend.repos.OrderDAO;
+import com.example.webshopbackend.repos.OrderRowDAO;
+import com.example.webshopbackend.repos.ProductDAO;
 
 import java.util.List;
 
@@ -23,9 +23,9 @@ import java.util.List;
 public class ControllerTest {
 
     @RequestMapping("/getcustomers")
-    public List<Customer> getAllCustomers(){
-        CustomerDAO customerDB = new CustomerDAO();
-        return customerDB.getAllCustomer();
+    public List<User> getAllCustomers(){
+        UserDAO customerDB = new UserDAO();
+        return customerDB.getAllUsers();
     }
 
     @RequestMapping("/getorders")

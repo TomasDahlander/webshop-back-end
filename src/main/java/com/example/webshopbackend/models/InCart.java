@@ -1,23 +1,23 @@
-package models;
+package com.example.webshopbackend.models;
 
 /**
  * Created by Tomas Dahlander <br>
  * Date: 2021-04-09 <br>
- * Time: 15:43 <br>
+ * Time: 15:45 <br>
  * Project: webshop-back-end <br>
  */
-public class BelongsTo {
+public class InCart {
 
     private int id;
     private Product productId;
-    private Category categoryId;
+    private User customerId;
 
-    public BelongsTo(){}
+    public InCart(){}
 
-    public BelongsTo(int id, Product productId, Category categoryId) {
+    public InCart(int id, int quantity, Product productId, User customerId) {
         this.id = id;
         this.productId = productId;
-        this.categoryId = categoryId;
+        this.customerId = customerId;
     }
 
     public int getId() {
@@ -36,11 +36,11 @@ public class BelongsTo {
         this.productId = productId;
     }
 
-    public Category getCategoryId() {
-        return categoryId;
+    public User getCustomerId() {
+        return customerId;
     }
 
-    public void setCategoryId(Category categoryId) {
-        this.categoryId = categoryId;
+    public void setCustomerId(User customerId) {
+        this.customerId = customerId;
     }
 }

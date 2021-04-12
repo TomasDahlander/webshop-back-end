@@ -1,8 +1,8 @@
-package repos;
+package com.example.webshopbackend.repos;
 
-import models.Order;
-import models.OrderRow;
-import models.Product;
+import com.example.webshopbackend.models.Order;
+import com.example.webshopbackend.models.OrderRow;
+import com.example.webshopbackend.models.Product;
 
 import java.util.ArrayList;
 import java.util.List;

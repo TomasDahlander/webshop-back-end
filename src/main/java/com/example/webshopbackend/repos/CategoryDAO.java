@@ -1,6 +1,6 @@
-package repos;
+package com.example.webshopbackend.repos;
 
-import models.Category;
+import com.example.webshopbackend.models.Category;
 
 import java.util.ArrayList;
 import java.util.List;
