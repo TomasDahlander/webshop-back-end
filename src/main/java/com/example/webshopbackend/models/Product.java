@@ -32,6 +32,7 @@ public class Product {
 
     public Product(){}
 
+    
     public Product(int id, String title, String description, double price, String unit, String brand, String image, int quantity, boolean isFeatured, List<Category> categories) {
         this.id = id;
         this.title = title;
