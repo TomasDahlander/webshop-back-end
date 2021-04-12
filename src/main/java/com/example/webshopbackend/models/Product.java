@@ -14,19 +14,10 @@ public class Product {
     private String title;
     private String description;
     private double price;
-    private double measurement;
-    public enum UNIT{
-        ml,
-        cl,
-        dl,
-        l,
-        g,
-        kg
-    }
-    private UNIT unit;
-    private String supplier;
+    private String unit;
+    private String brand;
     private String image;
-    private int inStock;
+    private int quantity;
     private boolean isFeatured;
     private List<Category> categories;
 
