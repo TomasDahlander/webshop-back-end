@@ -2,8 +2,12 @@ package com.example.webshopbackend.controllers;
 
 import com.example.webshopbackend.models.Order;
 import com.example.webshopbackend.models.OrderRow;
+import com.example.webshopbackend.models.Product;
 import com.example.webshopbackend.repos.OrderDAO;
 import com.example.webshopbackend.repos.OrderRowDAO;
+import com.example.webshopbackend.services.OrderService;
+import com.example.webshopbackend.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,17 +26,8 @@ import java.util.List;
 @CrossOrigin
 public class OrderController {
 
-<<<<<<<< HEAD:src/main/java/com/example/webshopbackend/controllers/OrderController.java
-    @GetMapping("/getorders")
-========
-    @RequestMapping("/getusers")
-    public List<User> getAllUsers(){
-        UserDAO customerDB = new UserDAO();
-        return customerDB.getAllUsers();
-    }
 
-    @RequestMapping("/getorders")
->>>>>>>> dev:src/main/java/com/example/webshopbackend/controllers/ControllerTest.java
+    @GetMapping("/getorders")
     public List<Order> getAllOrders(){
         OrderDAO orderDB = new OrderDAO();
         return orderDB.getAllOrders();
@@ -43,4 +38,5 @@ public class OrderController {
         OrderRowDAO orderRowDB = new OrderRowDAO();
         return orderRowDB.getAllOrderRows();
     }
+
 }

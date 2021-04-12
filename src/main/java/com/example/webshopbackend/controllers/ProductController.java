@@ -26,7 +26,7 @@ public class ProductController {
     private ProductService productService;
     @GetMapping("/getproducts")
     public List<Product> getAllProducts(){
-       // ProductDAO productDB = new ProductDAO();
+        // ProductDAO productDB = new ProductDAO();
         return productService.getProductDB();
     }
 }
