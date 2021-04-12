@@ -22,8 +22,8 @@ import java.util.List;
 @RestController
 public class ControllerTest {
 
-    @RequestMapping("/getcustomers")
-    public List<User> getAllCustomers(){
+    @RequestMapping("/getusers")
+    public List<User> getAllUsers(){
         UserDAO customerDB = new UserDAO();
         return customerDB.getAllUsers();
     }
