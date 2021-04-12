@@ -2,6 +2,7 @@ package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.User;
 import com.example.webshopbackend.models.Order;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
  * Time: 16:59 <br>
  * Project: webshop-back-end <br>
  */
+@Repository
 public class OrderDAO {
 
     List<User> customers;

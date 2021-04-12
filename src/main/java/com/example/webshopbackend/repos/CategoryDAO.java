@@ -1,6 +1,7 @@
 package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.Category;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * Time: 15:56 <br>
  * Project: webshop-back-end <br>
  */
+@Repository
 public class CategoryDAO {
 
     public List<Category> getAllCategories(){

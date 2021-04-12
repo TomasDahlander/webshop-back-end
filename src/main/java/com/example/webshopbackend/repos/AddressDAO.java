@@ -2,6 +2,7 @@ package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.Address;
 import com.example.webshopbackend.models.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * Time: 16:15 <br>
  * Project: webshop-back-end <br>
  */
+@Repository
 public class AddressDAO {
 
     public List<Address> getAllAddresses() {

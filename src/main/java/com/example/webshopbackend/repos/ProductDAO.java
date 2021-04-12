@@ -2,6 +2,7 @@ package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.Category;
 import com.example.webshopbackend.models.Product;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * Time: 16:30 <br>
  * Project: webshop-back-end <br>
  */
+@Repository
 public class ProductDAO {
 
     List<Category> pantry = new ArrayList<>();
