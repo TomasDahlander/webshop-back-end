@@ -30,4 +30,8 @@ public class CategoryService {
     public void addCategory(Category category) {
         categoryDAO.save(category);
     }
+
+    public void addCategoryList(List<Category> categories) {
+        categoryDAO.saveAll(categories);
+    }
 }

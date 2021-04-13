@@ -1,5 +1,6 @@
 package com.example.webshopbackend.controllers;
 
+import com.example.webshopbackend.models.Category;
 import com.example.webshopbackend.models.Product;
 import com.example.webshopbackend.repos.ProductDAO;
 import com.example.webshopbackend.services.ProductService;
@@ -31,6 +32,11 @@ public class ProductController {
     @PostMapping("/add")
     public void addProduct(@RequestBody Product product){
         productService.addProduct(product);
+    }
+
+    @PostMapping("/add/list")
+    public void addProductList(@RequestBody List<Product> products){
+        productService.addProductList(products);
     }
 
 }

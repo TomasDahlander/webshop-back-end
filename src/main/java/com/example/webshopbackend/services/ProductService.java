@@ -30,4 +30,8 @@ public class ProductService {
     public void addProduct(Product product) {
         productDAO.save(product);
     }
+
+    public void addProductList(List<Product> products) {
+        productDAO.saveAll(products);
+    }
 }

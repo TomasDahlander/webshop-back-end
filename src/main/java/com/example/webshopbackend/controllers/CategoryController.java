@@ -32,4 +32,9 @@ public class CategoryController {
     public void addCategory(@RequestBody Category category){
         categoryService.addCategory(category);
     }
+
+    @PostMapping("/add/list")
+    public void addCategoryList(@RequestBody List<Category> categories){
+        categoryService.addCategoryList(categories);
+    }
 }
