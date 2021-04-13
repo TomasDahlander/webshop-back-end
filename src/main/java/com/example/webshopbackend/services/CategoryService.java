@@ -34,4 +34,8 @@ public class CategoryService {
     public void addCategoryList(List<Category> categories) {
         categoryDAO.saveAll(categories);
     }
+
+    public void removeCategory() {
+        categoryDAO.deleteAllInBatch();
+    }
 }

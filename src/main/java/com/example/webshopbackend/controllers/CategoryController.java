@@ -37,4 +37,9 @@ public class CategoryController {
     public void addCategoryList(@RequestBody List<Category> categories){
         categoryService.addCategoryList(categories);
     }
+
+    @DeleteMapping("/remove")
+    public void deleteAllCategories(){
+        categoryService.removeCategory();
+    }
 }
