@@ -4,7 +4,9 @@ import com.example.webshopbackend.models.Product;
 import com.example.webshopbackend.repos.ProductDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -14,12 +16,18 @@ import java.util.List;
  * Project: webshop-back-end <br>
  */
 @Service
+@Transactional
 public class ProductService {
-
 
     @Autowired
     private ProductDAO productDAO;
+
+
     public List<Product> getProductDB() {
-        return productDAO.getAllProducts();
+        return productDAO.findAll();
+    }
+
+    public void addProduct(Product product) {
+        productDAO.save(product);
     }
 }

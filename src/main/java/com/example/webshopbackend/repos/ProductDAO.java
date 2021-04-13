@@ -2,6 +2,7 @@ package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.Category;
 import com.example.webshopbackend.models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -14,9 +15,11 @@ import java.util.List;
  * Project: webshop-back-end <br>
  */
 @Repository
-public class ProductDAO {
+public interface ProductDAO extends JpaRepository<Product, Integer> {
 
-    List<Category> categories;
+
+
+  /*  List<Category> categories;
 
     public ProductDAO(){
         CategoryDAO categoryDAO = new CategoryDAO();
@@ -67,5 +70,5 @@ public class ProductDAO {
             ,"Softlan","https://cdn4.matsmart.se/sites/se/files/styles/product_zoom/public/products/ms120252_sof_softlan_skoljmedel_plant_based_white_flower_650_ml_650mljpg.jpg?itok=IWVl9UAE"
             ,0,false,categories.get(2)));
         return list;
-    }
+    }*/
 }

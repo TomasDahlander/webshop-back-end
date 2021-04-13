@@ -1,5 +1,8 @@
 package com.example.webshopbackend.models;
 
+import lombok.*;
+
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -8,9 +11,19 @@ import java.util.List;
  * Time: 15:40 <br>
  * Project: webshop-back-end <br>
  */
+
+@Entity(name="Product")
+@Table(name="product")
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
+
     private String title;
     private String description;
     private double price;
@@ -19,112 +32,17 @@ public class Product {
     private String image;
     private int quantity;
     private boolean isFeatured;
-    // private List<Category> categories;
-    private Category category;
+
+    @ManyToMany(targetEntity= Category.class)
+    @JoinTable(name="product_category",
+            joinColumns=@JoinColumn(name="product_id"),
+            inverseJoinColumns=@JoinColumn(name="category_id"))
+    private List<Category> category;
 
     public Product(){}
 
-    public Product(int id, String title, String description, double price, String unit, String brand, String image, int quantity, boolean isFeatured, Category category) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.price = price;
-        this.unit = unit;
-        this.brand = brand;
-        this.image = image;
-        this.quantity = quantity;
-        this.isFeatured = isFeatured;
-        this.category = category;
-        // this.categories = categories;
-    }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getUnit() {
-        return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public boolean isFeatured() {
-        return isFeatured;
-    }
-
-    public void setFeatured(boolean featured) {
-        isFeatured = featured;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    //    public List<Category> getCategories() {
-//        return categories;
-//    }
-//
-//    public void setCategories(List<Category> categories) {
-//        this.categories = categories;
-//    }
 }
 
 

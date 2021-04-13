@@ -1,6 +1,7 @@
 package com.example.webshopbackend.repos;
 
 import com.example.webshopbackend.models.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -13,15 +14,15 @@ import java.util.List;
  * Project: webshop-back-end <br>
  */
 @Repository
-public class CategoryDAO {
+public interface CategoryDAO extends JpaRepository<Category , Integer> {
 
-    public List<Category> getAllCategories(){
+/*    public List<Category> getAllCategories(){
         List<Category> list = new ArrayList<>();
-        list.add(new Category(1,"skafferi"));
-        list.add(new Category(2,"snacks-godis"));
-        list.add(new Category(3,"hem-städ"));
+        list.add(new Category(1,"Skafferi"));
+        list.add(new Category(2,"Snacks-godis"));
+        list.add(new Category(3,"Hem-städ"));
         return list;
-    }
+    }*/
 
 }
 

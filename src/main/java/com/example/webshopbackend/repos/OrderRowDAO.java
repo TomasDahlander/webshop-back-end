@@ -21,9 +21,9 @@ public class OrderRowDAO {
     List<Order> orders;
 
     public OrderRowDAO(){
-        ProductDAO productDB = new ProductDAO();
+        //ProductDAO productDB = new ProductDAO();
         OrderDAO orderDB = new OrderDAO();
-        products = productDB.getAllProducts();
+        //products = productDB.getAllProducts();
         orders = orderDB.getAllOrders();
     }
 

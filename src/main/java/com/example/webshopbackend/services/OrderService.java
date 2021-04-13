@@ -16,9 +16,9 @@ import java.util.List;
 @Service
 public class OrderService {
 
-
     @Autowired
     private OrderDAO orderDAO;
+
     public List<Order> getUserDAO() {
         return orderDAO.getAllOrders();
     }

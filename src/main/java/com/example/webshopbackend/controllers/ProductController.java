@@ -4,10 +4,7 @@ import com.example.webshopbackend.models.Product;
 import com.example.webshopbackend.repos.ProductDAO;
 import com.example.webshopbackend.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,9 +21,16 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-    @GetMapping("/getproducts")
+
+    @GetMapping("/get")
     public List<Product> getAllProducts(){
        // ProductDAO productDB = new ProductDAO();
         return productService.getProductDB();
     }
+
+    @PostMapping("/add")
+    public void addProduct(@RequestBody Product product){
+        productService.addProduct(product);
+    }
+
 }
