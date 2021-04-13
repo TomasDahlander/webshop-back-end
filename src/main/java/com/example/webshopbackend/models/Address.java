@@ -14,17 +14,25 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID", unique = true, nullable = false)
     private Long id;
+
+    @Column(name = "street")
     private String street;
+
+    @Column(name = "zipcode")
     private String zipcode;
+
+    @Column(name = "city")
     private String city;
+
     @OneToMany
+    @JoinColumn(name = "ID")
     private List<User> user;
 
     public Address(){}
 
-    public Address(Long id, String street, String zipcode, String city) {
-        this.id = id;
+    public Address(String street, String zipcode, String city) {
         this.street = street;
         this.zipcode = zipcode;
         this.city = city;

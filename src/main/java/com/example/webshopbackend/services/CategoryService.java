@@ -1,9 +1,7 @@
 package com.example.webshopbackend.services;
 
 import com.example.webshopbackend.models.Category;
-import com.example.webshopbackend.models.Order;
 import com.example.webshopbackend.repos.CategoryDAO;
-import com.example.webshopbackend.repos.OrderDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

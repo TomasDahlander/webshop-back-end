@@ -2,8 +2,6 @@ package com.example.webshopbackend.controllers;
 
 import com.example.webshopbackend.models.Order;
 import com.example.webshopbackend.models.OrderRow;
-import com.example.webshopbackend.repos.OrderDAO;
-import com.example.webshopbackend.repos.OrderRowDAO;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +20,7 @@ import java.util.List;
 @CrossOrigin
 public class OrderController {
 
+    /*
     @GetMapping("/getorders")
     public List<Order> getAllOrders(){
         OrderDAO orderDB = new OrderDAO();
@@ -33,4 +32,6 @@ public class OrderController {
         OrderRowDAO orderRowDB = new OrderRowDAO();
         return orderRowDB.getAllOrderRows();
     }
+
+     */
 }

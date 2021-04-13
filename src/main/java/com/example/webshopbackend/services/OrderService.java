@@ -1,7 +1,6 @@
 package com.example.webshopbackend.services;
 
 import com.example.webshopbackend.models.Order;
-import com.example.webshopbackend.repos.OrderDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +14,7 @@ import java.util.List;
  */
 @Service
 public class OrderService {
+    /*
 
     @Autowired
     private OrderDAO orderDAO;
@@ -22,4 +22,6 @@ public class OrderService {
     public List<Order> getUserDAO() {
         return orderDAO.getAllOrders();
     }
+
+     */
 }
