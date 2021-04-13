@@ -1,32 +1,40 @@
 package com.example.webshopbackend.models;
 
+import javax.persistence.*;
+import java.util.List;
+
 /**
  * Created by Tomas Dahlander <br>
  * Date: 2021-04-12 <br>
  * Time: 11:53 <br>
  * Project: webshop-back-end <br>
  */
+@Entity
 public class Address {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String street;
     private String zipcode;
     private String city;
+    @OneToMany
+    private List<User> user;
 
     public Address(){}
 
-    public Address(int id, String street, String zipcode, String city) {
+    public Address(Long id, String street, String zipcode, String city) {
         this.id = id;
         this.street = street;
         this.zipcode = zipcode;
         this.city = city;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

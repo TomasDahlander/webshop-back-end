@@ -1,26 +1,32 @@
 package com.example.webshopbackend.models;
 
+import javax.persistence.*;
+
 /**
  * Created by Tomas Dahlander <br>
  * Date: 2021-04-09 <br>
  * Time: 15:32 <br>
  * Project: webshop-back-end <br>
  */
+@Entity
 public class User {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String email;
     private String password;
     private String firstname;
     private String lastname;
     private String number;
+    @ManyToOne
     private Address address;
     private int accountType;
     private boolean status;
 
     public User(){}
 
-    public User(int id, String email, String password, String firstname, String lastname, String number, Address address, int accountType, boolean status) {
+    public User(Long id, String email, String password, String firstname, String lastname, String number, Address address, int accountType, boolean status) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -32,11 +38,11 @@ public class User {
         this.status = status;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
