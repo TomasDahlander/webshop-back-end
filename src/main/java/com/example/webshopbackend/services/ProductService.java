@@ -34,4 +34,8 @@ public class ProductService {
     public void addProductList(List<Product> products) {
         productDAO.saveAll(products);
     }
+
+    public void removeProducts() {
+        productDAO.deleteAllInBatch();
+    }
 }

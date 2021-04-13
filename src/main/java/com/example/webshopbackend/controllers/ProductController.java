@@ -39,4 +39,9 @@ public class ProductController {
         productService.addProductList(products);
     }
 
+    @DeleteMapping("/remove")
+    public void deleteProductList(){
+        productService.removeProducts();
+    }
+
 }
